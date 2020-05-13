@@ -23,7 +23,8 @@
 <ul class="list-group">
   <% @restaurant.reviews.each do |review| %>
     <li class="list-group-item">
-      <%= review.content %>
+      <%= review.content %> | Rating:
+      <%= review.rating %>/5 |
       <%= link_to "Remove",
                   review_path(review),
                   method: :delete,
